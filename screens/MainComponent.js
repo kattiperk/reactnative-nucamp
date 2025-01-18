@@ -5,8 +5,11 @@ import DirectoryScreen from "./DirectoryScreen";
 import { createStackNavigator } from "@react-navigation/stack";
 import { createDrawerNavigator } from "@react-navigation/drawer";
 import HomeScreen from "./HomeScreen";
+import AboutScreen from "./AboutScreen";    
+import ContactScreen from "./ContactScreen";
 
 const Drawer = createDrawerNavigator();
+const Stack = createStackNavigator();
 
 const screenOptions = {
   headerTintColor: "#fff",
@@ -46,6 +49,32 @@ const DirectoryNavigator = () => {
   );
 };
 
+// About Navigator
+const AboutNavigator = () => {
+    return (
+        <Stack.Navigator>
+            <Stack.Screen
+                name="AboutMain"
+                component={AboutScreen}
+                options={{ title: 'About Us' }}
+                />
+        </Stack.Navigator>
+    );
+};
+
+// Contact Navigator
+const ContactNavigator = () => {
+    return (
+        <Stack.Navigator>
+            <Stack.Screen 
+                name="ContactMain" 
+                component={ContactScreen} 
+                options={{ title: 'Contact Us' }}
+            />
+        </Stack.Navigator>
+    );
+};
+
 const Main = () => {
   return (
     <View
@@ -76,6 +105,16 @@ const Main = () => {
             title: "Campsite Directory",
             headerShown: false,
           }}
+        />
+        <Drawer.Screen 
+            name="AboutNav" 
+            component={AboutNavigator} 
+            options={{ title: 'About Us', headerShown: false }} 
+        />
+        <Drawer.Screen 
+            name="ContactNav" 
+            component={ContactNavigator} 
+            options={{ title: 'Contact Us', headerShown: false }} 
         />
       </Drawer.Navigator>
     </View>
