@@ -1,6 +1,15 @@
 import React from 'react';
+////////// NOTE: The Text component used in this course comes from the 'react-native' library, not 'react-native-elements'. Yes, there is a Text component in the
+// RNE library, and yes, it works just fine (so no points off). However, the RNE Text component actually is built off the RN component and so any code you might copy/paste from the NuCamp cirrciulumn matches
+// I suggest you use the RN version.
+// OLD CODE:
+/*
 import { ScrollView } from 'react-native';
 import { Card, Text } from 'react-native-elements';
+*/
+import { ScrollView, Text } from 'react-native';
+import { Card } from 'react-native-elements';
+////////// END NOTE
 
 const ContactScreen = () => {
     return (

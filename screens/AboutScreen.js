@@ -24,6 +24,10 @@ const AboutScreen = () => {
             <Card>
                 <Card.Title>Community Partners</Card.Title>
                 <Card.Divider />
+                {
+////////// FIX 1: When you return from a function has multiple lines (your ListItem component block does), you need to wrap the block in parentheses.
+// OLD CODE:
+/*
                 {partners.map(partner => 
                     <ListItem key={partner.id}>
                         <Avatar rounded source={partner.image} />
@@ -33,6 +37,20 @@ const AboutScreen = () => {
                         </ListItem.Content>
                     </ListItem>
                 )}
+*/
+}
+                {partners.map(partner => (
+                    <ListItem key={partner.id}>
+                        <Avatar rounded source={partner.image} />
+                        <ListItem.Content>
+                            <ListItem.Title>{partner.name}</ListItem.Title>
+                            <ListItem.Subtitle>{partner.description}</ListItem.Subtitle>
+                        </ListItem.Content>
+                    </ListItem>
+                ))}
+{
+////////// END FIX 1
+}
             </Card>
         </ScrollView>
     );

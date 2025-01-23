@@ -9,7 +9,9 @@ import AboutScreen from "./AboutScreen";
 import ContactScreen from "./ContactScreen";
 
 const Drawer = createDrawerNavigator();
-const Stack = createStackNavigator();
+////////// NOTE: You can get rid of this line since a new Stack Navigator is created for each screen. I will comment this out.
+/*  const Stack = createStackNavigator();   */
+////////// END NOTE
 
 const screenOptions = {
   headerTintColor: "#fff",
@@ -32,7 +34,12 @@ const HomeNavigator = () => {
 const DirectoryNavigator = () => {
   const Stack = createStackNavigator();
   return (
-    <Stack.Navigator initialRouteName="Directory" screenOptions={screenOptions}>
+////////// NOTE: If you call your Stack.Screen "DirectoryMain", then this initial route prop has to match it.
+// OLD CODE:      <Stack.Navigator initialRouteName="Directory" screenOptions={screenOptions}>
+    <Stack.Navigator initialRouteName="DirectoryMain" screenOptions={screenOptions}>
+{
+////////// END NOTE
+}
       <Stack.Screen
         name="DirectoryMain"
         component={DirectoryScreen}
