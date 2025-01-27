@@ -3,7 +3,7 @@ import { useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import RenderCampsite from '../features/campsites/RenderCampsite';
 import { toggleFavorite } from '../features/favorites/favoritesSlice';
-import { commentsSlice } from '../features/comments/commentsSlice';
+import { addComment, postComment } from '../features/comments/commentsSlice';
 import { Rating, Input } from 'react-native-elements';
 
 const CampsiteInfoScreen = ({ route }) => {
@@ -22,10 +22,11 @@ const CampsiteInfoScreen = ({ route }) => {
             campsiteId: campsite.id,
             rating,
             author,
-            text
+            text,
+            id: comments.commentsArray.length // Ensure each comment has a unique id
         };
-        dispatch(commentsSlice(newComment));
-        console.log(newComment);
+        dispatch(addComment(newComment));
+        dispatch(postComment(newComment));
         setShowModal(!showModal);
     };
 
@@ -63,7 +64,7 @@ const CampsiteInfoScreen = ({ route }) => {
                         (comment) => comment.campsiteId === campsite.id
                     )}
                     renderItem={renderCommentItem}
-                    keyExtractor={(item) => item.id.toString()}
+                    keyExtractor={(item) => item.id.toString()} // Ensure item.id is defined
                     contentContainerStyle={{
                         marginHorizontal: 20,
                         paddingVertical: 20
