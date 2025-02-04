@@ -1,4 +1,4 @@
-package com.nucampsite;
+package com.nucampsiteweek3;
 
 import android.os.Build;
 import android.os.Bundle;

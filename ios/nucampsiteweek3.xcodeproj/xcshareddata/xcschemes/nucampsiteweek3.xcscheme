@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-               BuildableName = "nucampsite.app"
-               BlueprintName = "nucampsite"
-               ReferencedContainer = "container:nucampsite.xcodeproj">
+               BuildableName = "nucampsiteweek3.app"
+               BlueprintName = "nucampsiteweek3"
+               ReferencedContainer = "container:nucampsiteweek3.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "00E356ED1AD99517003FC87E"
-               BuildableName = "nucampsiteTests.xctest"
-               BlueprintName = "nucampsiteTests"
-               ReferencedContainer = "container:nucampsite.xcodeproj">
+               BuildableName = "nucampsiteweek3Tests.xctest"
+               BlueprintName = "nucampsiteweek3Tests"
+               ReferencedContainer = "container:nucampsiteweek3.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -55,9 +55,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-            BuildableName = "nucampsite.app"
-            BlueprintName = "nucampsite"
-            ReferencedContainer = "container:nucampsite.xcodeproj">
+            BuildableName = "nucampsiteweek3.app"
+            BlueprintName = "nucampsiteweek3"
+            ReferencedContainer = "container:nucampsiteweek3.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -72,9 +72,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-            BuildableName = "nucampsite.app"
-            BlueprintName = "nucampsite"
-            ReferencedContainer = "container:nucampsite.xcodeproj">
+            BuildableName = "nucampsiteweek3.app"
+            BlueprintName = "nucampsiteweek3"
+            ReferencedContainer = "container:nucampsiteweek3.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

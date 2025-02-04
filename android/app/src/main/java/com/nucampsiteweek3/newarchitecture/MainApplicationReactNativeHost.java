@@ -1,4 +1,4 @@
-package com.nucampsite.newarchitecture;
+package com.nucampsiteweek3.newarchitecture;
 
 import android.app.Application;
 import androidx.annotation.NonNull;
@@ -20,9 +20,9 @@ import com.facebook.react.fabric.EmptyReactNativeConfig;
 import com.facebook.react.fabric.FabricJSIModuleProvider;
 import com.facebook.react.fabric.ReactNativeConfig;
 import com.facebook.react.uimanager.ViewManagerRegistry;
-import com.nucampsite.BuildConfig;
-import com.nucampsite.newarchitecture.components.MainComponentsRegistry;
-import com.nucampsite.newarchitecture.modules.MainApplicationTurboModuleManagerDelegate;
+import com.nucampsiteweek3.BuildConfig;
+import com.nucampsiteweek3.newarchitecture.components.MainComponentsRegistry;
+import com.nucampsiteweek3.newarchitecture.modules.MainApplicationTurboModuleManagerDelegate;
 import java.util.ArrayList;
 import java.util.List;
 
