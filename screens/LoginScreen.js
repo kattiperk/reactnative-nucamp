@@ -155,6 +155,16 @@ const RegisterTab = () => {
         }
     };
 
+    const processImage = async (imageUri) => {
+        const processedImage = await ImageManipulator.manipulateAsync(
+            imageUri,
+            [{ resize: { width: 400, height: 400 } }],
+            { format: ImageManipulator.SaveFormat.PNG }
+        );
+        console.log(processedImage);
+        setImageUrl(processedImage.uri);
+    };
+
     const getImageFromGallery = async () => {
         const galleryPermission =
             await ImagePicker.requestMediaLibraryPermissionsAsync();
@@ -164,23 +174,12 @@ const RegisterTab = () => {
                     allowsEditing: true,
                     aspect: [1, 1]
                 });
-                if (!capturedImage.assets) {
+                if (!capturedImage.cancelled) {
                     console.log(capturedImage.assets[0]);
                     // setImageUrl(selectedImage.assets[0].uri);
                     processImage(capturedImage.assets[0].uri);
                 }
             }
-    };
-
-    const processImage = async (imageUri) => {
-        const processedImage = await ImageManipulator.manipulateAsync(
-            imageUri,
-            [{ resize: { width: 400 } }],
-            { format: 'png' }
-        );
-        console.log(processedImage);
-
-        setImageUrl(processedImage.uri);
     };
 
     return (
